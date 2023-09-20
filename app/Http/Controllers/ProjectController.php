@@ -35,12 +35,11 @@ class ProjectController extends Controller
             'name' => 'required|max:120',
             'description' => 'required'
         ]);
-//        Project::create([
-//            'name' => $request->name,
-//            'description' => $request->description,
-//        ]);
-//        return to_route('projects.index');
-        dd($request);
+        Project::create([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+        return to_route('projects.index');
     }
 
 
